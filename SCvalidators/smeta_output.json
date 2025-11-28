@@ -1,0 +1,194 @@
+{
+  "grant_metadata": {
+    "name": "Разработка нового материала для квантовых процессоров",
+    "total_budget": 5000000,
+    "currency": "RUB",
+    "start_date": "2026-01-01",
+    "end_date": "2027-12-31",
+    "duration_months": 24,
+    "payment_system": "Мир"
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "stage_name": "Исследовательская фаза",
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
+      "duration_months": 12,
+      "stage_budget": 2000000,
+      "status": "planned",
+      "spending_rules": [
+        {
+          "rule_id": "1.1",
+          "rule_type": "individuals",
+          "rule_name": "Выплаты физическим лицам",
+          "limit": 800000,
+          "allowed_categories": [
+            "Заработная плата научных сотрудников",
+            "Стипендии аспирантам и студентам",
+            "Оплата услуг внешних консультантов"
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "1.2",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки у юридических лиц - Оборудование",
+          "limit": 1200000,
+          "allowed_categories": [
+            {
+              "category": "Научное оборудование и измерительные приборы",
+              "mcc_codes": [
+                "5047",
+                "5094",
+                "5122"
+              ]
+            },
+            {
+              "category": "Лабораторная техника",
+              "mcc_codes": [
+                "5047",
+                "5094",
+                "5122"
+              ]
+            },
+            {
+              "category": "Компьютеры и серверное оборудование",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            }
+          ],
+          "transactions": []
+        }
+      ]
+    },
+    {
+      "stage_id": 2,
+      "stage_name": "Экспериментальная фаза",
+      "start_date": "2027-01-01",
+      "end_date": "2027-12-31",
+      "duration_months": 12,
+      "stage_budget": 3000000,
+      "status": "planned",
+      "spending_rules": [
+        {
+          "rule_id": "2.1",
+          "rule_type": "individuals",
+          "rule_name": "Выплаты физическим лицам",
+          "limit": 900000,
+          "allowed_categories": [
+            "Заработная плата научных сотрудников",
+            "Стипендии аспирантам",
+            "Премии за достижение показателей"
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "2.2.1",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки у юридических лиц - Оборудование",
+          "limit": 800000,
+          "allowed_categories": [
+            {
+              "category": "Специализированное оборудование для экспериментов",
+              "mcc_codes": [
+                "5047",
+                "5094",
+                "5122"
+              ]
+            },
+            {
+              "category": "Системы контроля и мониторинга",
+              "mcc_codes": [
+                "5047",
+                "5094",
+                "5122"
+              ]
+            }
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "2.2.2",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки у юридических лиц - Материалы",
+          "limit": 600000,
+          "allowed_categories": [
+            {
+              "category": "Химические реагенты и материалы",
+              "mcc_codes": [
+                "5169",
+                "5085",
+                "5199"
+              ]
+            },
+            {
+              "category": "Расходные материалы для лаборатории",
+              "mcc_codes": [
+                "5111",
+                "5198",
+                "5199"
+              ]
+            },
+            {
+              "category": "Образцы и заготовки для экспериментов",
+              "mcc_codes": [
+                "5199",
+                "5099"
+              ]
+            }
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "2.2.3",
+          "rule_type": "legal_entities",
+          "rule_name": "Оплата услуг аутсорсинговых лабораторий",
+          "limit": 700000,
+          "allowed_categories": [
+            {
+              "category": "Услуги сторонних лабораторий по анализу образцов",
+              "mcc_codes": [
+                "8071",
+                "8099",
+                "8734"
+              ]
+            },
+            {
+              "category": "Тестирование и сертификация",
+              "mcc_codes": [
+                "8734",
+                "8071"
+              ]
+            },
+            {
+              "category": "Специализированные исследования",
+              "mcc_codes": [
+                "8071",
+                "8099",
+                "8734"
+              ]
+            }
+          ],
+          "transactions": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_spent": 0,
+    "total_remaining": 5000000,
+    "spending_by_type": {
+      "individuals": 0,
+      "legal_entities": 0
+    },
+    "spending_by_stage": {
+      "1": 0,
+      "2": 0
+    },
+    "last_updated": "2025-11-28T19:39:00Z"
+  }
+}

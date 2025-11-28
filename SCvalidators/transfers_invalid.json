@@ -1,0 +1,67 @@
+[
+    {
+        "payer_type": "individual",
+        "inn": "111111111111",
+        "amount": 900000,
+        "date": "2026-03-15"
+    },
+    {
+        "payer_type": "legal_entity",
+        "inn": "7708111111",
+        "amount": 500000,
+        "mcc": "9999",
+        "date": "2026-07-20"
+    },
+    {
+        "payer_type": "legal_entity",
+        "inn": "7712345678",
+        "amount": 300000,
+        "mcc": "5169",
+        "date": "2026-08-10"
+    },
+    {
+        "payer_type": "individual",
+        "inn": "222222222222",
+        "amount": 100000,
+        "date": "2025-12-01"
+    },
+    {
+        "payer_type": "individual",
+        "inn": "333333333333",
+        "amount": 50000,
+        "date": "2028-01-15"
+    },
+    {
+        "payer_type": "legal_entity",
+        "inn": "7734567890",
+        "amount": 1500000,
+        "mcc": "5047",
+        "date": "2026-09-01"
+    },
+    {
+        "payer_type": "legal_entity",
+        "inn": "7745678901",
+        "amount": 200000,
+        "mcc": "8071",
+        "date": "2026-11-20"
+    },
+    {
+        "payer_type": "individual",
+        "inn": "444444444444",
+        "amount": 500000,
+        "date": "2027-02-10"
+    },
+    {
+        "payer_type": "individual",
+        "inn": "555555555555",
+        "amount": 600000,
+        "date": "2027-06-15"
+    },
+    {
+        "payer_type": "legal_entity",
+        "inn": "7756789012",
+        "amount": 300000,
+        "mcc": "5732",
+        "date": "2027-04-01"
+    }
+]
