@@ -1,0 +1,264 @@
+{
+  "grant_metadata": {
+    "name": "Создание системы управления цепочками поставок на основе блокчейна",
+    "total_budget": 8500000,
+    "currency": "RUB",
+    "start_date": "2026-02-01",
+    "end_date": "2027-06-30",
+    "duration_months": 17,
+    "payment_system": "Мир"
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "stage_name": "РАЗРАБОТКА АРХИТЕКТУРЫ",
+      "start_date": "2026-02-01",
+      "end_date": "2026-05-31",
+      "duration_months": 4,
+      "stage_budget": 2500000,
+      "status": "planned",
+      "spending_rules": [
+        {
+          "rule_id": "1.1",
+          "rule_type": "individuals",
+          "rule_name": "Выплаты физическим лицам",
+          "limit": 1200000,
+          "allowed_categories": [
+            "Оклады разработчиков и архитекторов",
+            "Стипендии аспирантам и студентам",
+            "Консультационные услуги внешних специалистов"
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "1.2",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки оборудования",
+          "limit": 900000,
+          "allowed_categories": [
+            {
+              "category": "Серверное оборудование и сетевые устройства",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            },
+            {
+              "category": "Компьютеры для разработки",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            },
+            {
+              "category": "Хранилища данных",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            }
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "1.3",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки программного обеспечения",
+          "limit": 400000,
+          "allowed_categories": [
+            {
+              "category": "Лицензии разработки",
+              "mcc_codes": [
+                "5732",
+                "5734"
+              ]
+            },
+            {
+              "category": "IDE и инструменты",
+              "mcc_codes": [
+                "5732",
+                "5734"
+              ]
+            },
+            {
+              "category": "Облачные сервисы",
+              "mcc_codes": [
+                "5732",
+                "5734"
+              ]
+            }
+          ],
+          "transactions": []
+        }
+      ]
+    },
+    {
+      "stage_id": 2,
+      "stage_name": "РАЗРАБОТКА И ТЕСТИРОВАНИЕ",
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-31",
+      "duration_months": 8,
+      "stage_budget": 3800000,
+      "status": "planned",
+      "spending_rules": [
+        {
+          "rule_id": "2.1",
+          "rule_type": "individuals",
+          "rule_name": "Выплаты физическим лицам",
+          "limit": 2000000,
+          "allowed_categories": [
+            "Заработная плата разработчиков",
+            "Премии за выполнение этапов",
+            "Оплата тестировщиков"
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "2.2",
+          "rule_type": "legal_entities",
+          "rule_name": "Закупки оборудования",
+          "limit": 1000000,
+          "allowed_categories": [
+            {
+              "category": "Дополнительное серверное оборудование",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            },
+            {
+              "category": "Устройства для мониторинга",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            }
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "2.3",
+          "rule_type": "legal_entities",
+          "rule_name": "Услуги тестирования и валидации",
+          "limit": 800000,
+          "allowed_categories": [
+            {
+              "category": "Независимое тестирование безопасности",
+              "mcc_codes": [
+                "8734"
+              ]
+            },
+            {
+              "category": "Аудит смарт-контрактов",
+              "mcc_codes": [
+                "8734"
+              ]
+            },
+            {
+              "category": "Сертификация",
+              "mcc_codes": [
+                "8734"
+              ]
+            }
+          ],
+          "transactions": []
+        }
+      ]
+    },
+    {
+      "stage_id": 3,
+      "stage_name": "РАЗВЕРТЫВАНИЕ И ПОДДЕРЖКА",
+      "start_date": "2027-02-01",
+      "end_date": "2027-06-30",
+      "duration_months": 5,
+      "stage_budget": 2200000,
+      "status": "planned",
+      "spending_rules": [
+        {
+          "rule_id": "3.1",
+          "rule_type": "individuals",
+          "rule_name": "Выплаты физическим лицам",
+          "limit": 1000000,
+          "allowed_categories": [
+            "Зарплата команды поддержки",
+            "Консультирование клиентов"
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "3.2",
+          "rule_type": "legal_entities",
+          "rule_name": "Инфраструктура и хостинг",
+          "limit": 900000,
+          "allowed_categories": [
+            {
+              "category": "Облачный хостинг",
+              "mcc_codes": [
+                "5732",
+                "5734"
+              ]
+            },
+            {
+              "category": "CDN сервисы",
+              "mcc_codes": [
+                "5732",
+                "5734"
+              ]
+            },
+            {
+              "category": "Резервное оборудование",
+              "mcc_codes": [
+                "5732",
+                "5734",
+                "5045"
+              ]
+            }
+          ],
+          "transactions": []
+        },
+        {
+          "rule_id": "3.3",
+          "rule_type": "legal_entities",
+          "rule_name": "Обучение и документирование",
+          "limit": 300000,
+          "allowed_categories": [
+            {
+              "category": "Создание учебных материалов",
+              "mcc_codes": [
+                "5943",
+                "5192"
+              ]
+            },
+            {
+              "category": "Проведение вебинаров",
+              "mcc_codes": [
+                "7999",
+                "5945"
+              ]
+            }
+          ],
+          "transactions": []
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_spent": 0,
+    "total_remaining": 8500000,
+    "spending_by_type": {
+      "individuals": 0,
+      "legal_entities": 0
+    },
+    "spending_by_stage": {
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    "last_updated": "2025-11-28T20:11:00Z"
+  }
+}

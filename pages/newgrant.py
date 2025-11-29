@@ -19,5 +19,5 @@ grant_estimate = st.file_uploader("Смета проекта",
 )
 
 if(st.button("Создать")):
-    saveSC(parse_smeta(grant_estimate), grant_name)
-    st.succes("Грант успешно создан!")
+    saveSC(grant_name, parse_smeta(grant_estimate))
+    st.success("Грант успешно создан!")

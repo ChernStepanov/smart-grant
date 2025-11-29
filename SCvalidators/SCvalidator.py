@@ -32,7 +32,7 @@ class SmetaParser:
     
     def _read_docx(self, file_path):
         """Читает DOCX файл"""
-        doc = file_path #!!!
+        doc = Document(file_path)
         return "\n".join([p.text for p in doc.paragraphs if p.text.strip()])
     
     def _create_prompt(self, smeta_text):

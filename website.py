@@ -1,6 +1,7 @@
 import streamlit as st
+from SChandler import getSCs
 
-grants = ["Первый грант"]
+grants = getSCs()
 
 def main():
     st.set_page_config(page_title="МойГрант", page_icon="💰")
