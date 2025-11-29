@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
-from config import NVIDIA_API_BILL
+from config import NVIDIA_API_BILL, LLM_API_URL
 
 BASE_URL = "https://kkt-online.nalog.ru"
 NVIDIA_API_KEY = NVIDIA_API_BILL
@@ -18,7 +18,7 @@ NVIDIA_API_KEY = NVIDIA_API_BILL
 def extract_receipt_data_from_image(image):
     image_b64 = base64.b64encode(image.getvalue()).decode()
 
-    invoke_url = "https://integrate.api.nvidia.com/v1/chat/completions"
+    invoke_url = LLM_API_URL
     
     
     headers = {
@@ -32,36 +32,36 @@ def extract_receipt_data_from_image(image):
             {
                 "role": "user",
                 "content": f"""Extract these data:
-ФП
-ФН
-ФД
-Дата
-Время
-Сумма
+        ФП
+        ФН
+        ФД
+        Дата
+        Время
+        Сумма
 
-Create json in this format:
+        Create json in this format:
 
-{{
-    "type": "request",
-    "fp": "ФП",
-    "fn": "ФН",
-    "fd": "ФД",
-    "date": "Дата в формате 11.11.1111",
-    "time": "Время",
-    "operationtype": "1",
-    "summ": "Сумма, разделитель - запятая"
-}}
+        {{
+            "type": "request",
+            "fp": "ФП",
+            "fn": "ФН",
+            "fd": "ФД",
+            "date": "Дата в формате 11.11.1111",
+            "time": "Время",
+            "operationtype": "1",
+            "summ": "Сумма, разделитель - запятая"
+        }}
 
-Некоторые значения статичны. Если значения не найдены, укажи нули во всех пунктах
-<img src="data:image/png;base64,{image_b64}" />"""
-            }
-        ],
-        "max_tokens": 512,
-        "temperature": 1.00,
-        "top_p": 1.00,
-        "frequency_penalty": 0.00,
-        "presence_penalty": 0.00,
-        "stream": False
+        Некоторые значения статичны. Если значения не найдены, укажи нули во всех пунктах
+        <img src="data:image/png;base64,{image_b64}" />"""
+                    }
+                ],
+                "max_tokens": 512,
+                "temperature": 1.00,
+                "top_p": 1.00,
+                "frequency_penalty": 0.00,
+                "presence_penalty": 0.00,
+                "stream": False
     }
 
     try:
@@ -261,30 +261,3 @@ def fetch_receipt(data):
     
     success, details = post_receipt(data, cookies)
     return success, details
-
-if __name__ == "__main__":
-    image_path = "image.jpg"
-    
-    print("Extracting data from image...")
-    start_extract = time.time()
-    receipt_data = extract_receipt_data_from_image(image_path)
-    end_extract = time.time()
-    
-    if not receipt_data:
-        print("Failed to extract data from image")
-        exit(1)
-    
-    print(f"Data extraction took: {end_extract - start_extract:.2f} seconds")
-    print("Extracted data:", receipt_data)
-    
-    print("\nSending data to server...")
-    start_fetch = time.time()
-    success, details = fetch_receipt(receipt_data)
-    end_fetch = time.time()
-    
-    print(f"Data sending took: {end_fetch - start_fetch:.2f} seconds")
-    print("Success:", success)
-    print("Details:", details)
-    
-    total_time = (end_extract - start_extract) + (end_fetch - start_fetch)
-    print(f"\nTotal execution time: {total_time:.2f} seconds")
